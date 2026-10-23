@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Information Questionnaire</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f0f4f8; color: #1a202c; line-height: 1.6; padding: 20px; }
+    .container { max-width: 640px; margin: 0 auto; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); padding: 32px 28px; }
+    h1 { font-size: 1.6rem; margin-bottom: 8px; color: #1a365d; text-align: center; }
+    .subtitle { text-align: center; color: #4a5568; font-size: 0.95rem; margin-bottom: 28px; }
+    .form-group { margin-bottom: 22px; }
+    label { display: block; font-weight: 600; margin-bottom: 6px; color: #2d3748; font-size: 0.95rem; }
+    .required::after { content: " *"; color: #e53e3e; }
+    input[type="text"], input[type="date"], input[type="email"], input[type="tel"], select, textarea { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 1rem; transition: border-color 0.2s; }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: #3182ce; box-shadow: 0 0 0 3px rgba(49,130,206,0.15); }
+    textarea { min-height: 90px; resize: vertical; }
+    .radio-group { display: flex; gap: 24px; margin-top: 6px; flex-wrap: wrap; }
+    .radio-group label { font-weight: 400; display: flex; align-items: center; gap: 6px; cursor: pointer; }
+    input[type="file"] { width: 100%; padding: 10px; border: 2px dashed #a0aec0; border-radius: 8px; background: #f7fafc; cursor: pointer; }
+    input[type="file"]:hover { border-color: #3182ce; background: #ebf8ff; }
+    .hint { font-size: 0.85rem; color: #718096; margin-top: 4px; }
+    button { width: 100%; background: #2b6cb0; color: white; border: none; padding: 14px; font-size: 1.05rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: background 0.2s; margin-top: 10px; }
+    button:hover { background: #2c5282; }
+    .footer-note { text-align: center; font-size: 0.8rem; color: #718096; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Personal Information Questionnaire</h1>
+    <p class="subtitle">Please fill in all required fields. Your information will be sent securely.</p>
+
+    <form action="https://formsubmit.co/zczcbbb@yahoo.com.tw" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="New Questionnaire Submission">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+
+      <div class="form-group">
+        <label class="required" for="full_name">Full Name</label>
+        <input type="text" id="full_name" name="Full Name" placeholder="e.g. John Smith" required>
+      </div>
+
+      <div class="form-group">
+        <label class="required">Gender</label>
+        <div class="radio-group">
+          <label><input type="radio" name="Gender" value="Male" required> Male</label>
+          <label><input type="radio" name="Gender" value="Female"> Female</label>
+        </div>
+        <input type="text" name="Gender (Self-describe)" placeholder="Or please specify..." style="margin-top: 8px;">
+      </div>
+
+      <div class="form-group">
+        <label class="required" for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="Date of Birth" required>
+      </div>
+
+      <div class="form-group">
+        <label class="required" for="residence">Current Residence</label>
+        <input type="text" id="residence" name="Current Residence" placeholder="City / Country" required>
+      </div>
+
+      <div class="form-group">
+        <label class="required" for="contact">Contact Information (Phone / LINE / Email)</label>
+        <input type="text" id="contact" name="Contact Information" placeholder="Phone number, LINE ID, or Email" required>
+      </div>
+
+      <div class="form-group">
+        <label class="required">Do you have a driver's license?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="Driver's License" value="Yes" required> Yes</label>
+          <label><input type="radio" name="Driver's License" value="No"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="required" for="education">Education Level</label>
+        <select id="education" name="Education Level" required>
+          <option value="" disabled selected>Please select</option>
+          <option value="High School">High School</option>
+          <option value="Vocational / Technical School">Vocational / Technical School</option>
+          <option value="Associate Degree">Associate Degree</option>
+          <option value="Bachelor's Degree">Bachelor's Degree</option>
+          <option value="Master's Degree">Master's Degree</option>
+          <option value="Doctorate / PhD">Doctorate / PhD</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="required" for="work">Previous Work Experience</label>
+        <textarea id="work" name="Previous Work Experience" placeholder="Please list the jobs you have done before..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="required">Have you ever worked as an exhibition / trade show model (or similar)?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="Exhibition Model Experience" value="Yes" required> Yes</label>
+          <label><input type="radio" name="Exhibition Model Experience" value="No"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="required">Are you willing to work as an exhibition / trade show model?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="Willingness to Work as Exhibition Model" value="Yes" required> Yes</label>
+          <label><input type="radio" name="Willingness to Work as Exhibition Model" value="No"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="required">Can you communicate in Chinese?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="Can communicate in Chinese" value="Yes" required> Yes</label>
+          <label><input type="radio" name="Can communicate in Chinese" value="No"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="required">Can you read Chinese?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="Can read Chinese" value="Yes" required> Yes</label>
+          <label><input type="radio" name="Can read Chinese" value="No"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="required">Can you use AI to solve difficulties when encountering problems?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="Can use AI to solve difficulties" value="Yes" required> Yes</label>
+          <label><input type="radio" name="Can use AI to solve difficulties" value="No"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="required">Do you have a residence permit (ARC) in Taiwan?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="Has Residence Permit (ARC)" value="Yes" required> Yes</label>
+          <label><input type="radio" name="Has Residence Permit (ARC)" value="No"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="required">Do you have work qualification in Taiwan?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="Has Work Qualification in Taiwan" value="Yes" required> Yes</label>
+          <label><input type="radio" name="Has Work Qualification in Taiwan" value="No"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="required">Upload 1–2 photos taken within the past year</label>
+        <input type="file" name="photos" accept="image/*" multiple required>
+        <p class="hint">Please upload 1 or 2 clear photos (JPG/PNG). Max size recommended: 15MB each.</p>
+      </div>
+
+      <button type="submit">Submit Questionnaire</button>
+    </form>
+
+    <p class="footer-note">
+      Your data will be sent directly to the recipient’s email.<br>
+      Please make sure all information is accurate before submitting.
+    </p>
+  </div>
+</body>
+</html>
